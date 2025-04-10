@@ -1,0 +1,8 @@
+:root {
+  --primary: red;
+  --secondary: rgba(128, 128, 128, 0.5);
+}
+/* header */
+.homePage {
+  background-color: green;
+}

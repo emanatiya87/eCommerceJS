@@ -1,0 +1,44 @@
+:root {
+  --primary: red;
+  --secondary: rgba(190, 190, 190, 0.5);
+  --mainColor: rgb(20, 149, 132);
+  --temporaryColor: rgb(83, 83, 83);
+}
+/* header */
+.homePage {
+  background-color: var(--secondary);
+}
+.homeContent {
+  height: 100%;
+}
+.homeTitle {
+  background: url(../images/hero4.png);
+  background-size: cover;
+  height: 100%;
+}
+.homeTitleContent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 50px;
+}
+.homeTitleContent h2 {
+  font-weight: bold;
+}
+.homeTitleContent h2 span {
+  color: var(--mainColor);
+}
+.homeTitleContent p {
+  color: var(--temporaryColor);
+  font-weight: 400;
+}
+.homeTitleContent a {
+  color: var(--mainColor);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  background: url(../images/button.png);
+  background-size: contain;
+  cursor: pointer;
+}

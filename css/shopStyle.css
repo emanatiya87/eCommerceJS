@@ -1,0 +1,68 @@
+:root {
+  --primary: red;
+  --secondary: rgba(128, 128, 128, 0.5);
+  --mainColor: rgb(20, 149, 132);
+  --secondryBackgroundColor: rgba(18, 32, 103, 0.862);
+  --temporaryColor: rgb(83, 83, 83);
+  --starsColor: #ffc107;
+  --starsHover: #ffb400;
+  --emptyStars: #e4e5e9;
+}
+.stayHome {
+  margin-top: 65px;
+  background-color: var(--secondryBackgroundColor);
+  color: white;
+  padding: 40px 10px;
+}
+.stayHomeContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* products */
+main {
+  margin-top: 10px;
+}
+.productCard {
+  border: 1px solid var(--secondary);
+  border-radius: 15px;
+  padding: 10px 15px;
+  margin: 10px;
+}
+.productCard:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.productCard h6 {
+  color: var(--temporaryColor);
+  padding-top: 10px 5px;
+}
+.productCardImg img {
+  width: 100%;
+  border-radius: 15px;
+}
+.productCard p i {
+  color: var(--emptyStars);
+}
+.productCard p i:hover {
+  color: var(--starsHover);
+}
+.productCardPrice {
+  font-size: 2rem;
+  color: var(--mainColor);
+  font-weight: bold;
+}
+.productCardCart {
+  cursor: pointer;
+}
+.productCardCart a {
+  color: white;
+  font-size: 1.5rem;
+}
+.productCard .oldPrice {
+  text-decoration: line-through;
+  text-decoration: black line-through;
+}
+.dash {
+  color: black;
+}
