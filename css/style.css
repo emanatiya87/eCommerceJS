@@ -3,6 +3,7 @@
   --primary: red;
   --secondary: rgba(190, 190, 190, 0.5);
   --mainColor: rgb(20, 149, 132);
+  --secondryBackgroundColor: rgba(18, 32, 103, 0.862);
 }
 body {
   height: 3000px;
@@ -35,6 +36,9 @@ nav ul li a {
 .navLg {
   background-color: var(--secondary);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.menue ul li {
+  font-size: 1.5rem;
 }
 /* nav ul li a:hover {
 color: ;} */
@@ -79,4 +83,40 @@ color: ;} */
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+/* loading */
+.loader {
+  width: 100px;
+  height: 40px;
+  --g: radial-gradient(
+      farthest-side,
+      #0000 calc(95% - 3px),
+      var(--mainColor) calc(100% - 3px) 98%,
+      #0000 101%
+    )
+    no-repeat;
+  background: var(--g), var(--g), var(--g);
+  background-size: 30px 30px;
+  animation: l9 1s infinite alternate;
+  margin: 0 auto;
+}
+@keyframes l9 {
+  0% {
+    background-position: 0 50%, 50% 50%, 100% 50%;
+  }
+  20% {
+    background-position: 0 0, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0 100%, 50% 0, 100% 50%;
+  }
+  60% {
+    background-position: 0 50%, 50% 100%, 100% 0;
+  }
+  80% {
+    background-position: 0 50%, 50% 50%, 100% 100%;
+  }
+  100% {
+    background-position: 0 50%, 50% 50%, 100% 50%;
+  }
 }
