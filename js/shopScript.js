@@ -5,9 +5,9 @@ fetch(
   .then((response) => response.json())
   .then((data) => {
     displayProducts(data.sheet1);
-    displayCategory(data.sheet2);
-    console.log("Sheet1 Data:", data.sheet1);
-    console.log("Sheet2 Data:", data.sheet2);
+    // displayCategory(data.sheet2);
+    // console.log("Sheet1 Data:", data.sheet1);
+    // console.log("Sheet2 Data:", data.sheet2);
   })
   .catch((error) => console.error("Error:", error));
 // Function to display cards on the page
@@ -42,8 +42,15 @@ function displayProducts(data) {
                 </div>
                 <div
                   class="productCardCart circle d-flex justify-content-center align-items-center"
+                  onclick='addToCart(${JSON.stringify([
+                    e[0],
+                    e[1],
+                    e[2],
+                    e[3],
+                    e[4],
+                  ])})'
                 >
-                  <a href=""> <i class="fa-solid fa-cart-shopping"></i></a>
+                  <i class="fa-solid fa-cart-shopping"></i>
                 </div>
               </div>
             </div>
@@ -54,20 +61,13 @@ function displayProducts(data) {
     allProducts.innerHTML = cartona;
   });
 }
-// let category = document.getElementById("category");
-// function displayCategory(data) {
-//   let cartona = " ";
-//   category.innerHTML = " ";
-//   data.forEach((e) => {
-//     cartona += `
-//   <div class="card">
-//     <h3 class="oldPrice">${e[1]}</h3>
-//     <h3>${e[0]}</h3>
-//     <br />
-//      <div class="circle" style=" background-color: ${e[2]};"></div>
-
-//   </div>
-//      `;
-//     category.innerHTML = cartona;
-//   });
-// }
+let sucssesAdding = document.getElementById("sucssesAdding");
+function addToCart(e) {
+  let cartProduct = JSON.parse(sessionStorage.getItem("cartProduct")) || [];
+  cartProduct.push(e);
+  sessionStorage.setItem("cartProduct", JSON.stringify(cartProduct));
+  sucssesAdding.style.display = "block";
+  setTimeout(() => {
+    sucssesAdding.style.display = "none";
+  }, 1500);
+}

@@ -9,17 +9,9 @@
   --emptyStars: #e4e5e9;
 }
 .stayHome {
-  margin-top: 65px;
   background-color: var(--secondryBackgroundColor);
-  color: white;
-  padding: 40px 10px;
 }
-.stayHomeContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 /* products */
 main {
   margin-top: 10px;
@@ -55,7 +47,7 @@ main {
 .productCardCart {
   cursor: pointer;
 }
-.productCardCart a {
+.productCardCart i {
   color: white;
   font-size: 1.5rem;
 }
@@ -65,4 +57,16 @@ main {
 }
 .dash {
   color: black;
+}
+.sucssesAdding {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  background-color: var(--secondary);
+  font-size: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px 0;
+  display: none;
 }

@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="css/all.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cartStyle.css" />
   </head>
   <body>
-    <header class="homePage">
-      <div class="overlay"></div>
+    <header>
       <div class="container-fluid">
         <!--start nav bar -->
         <nav class="row navLg">
@@ -108,8 +108,57 @@
         <!-- end of nav bar -->
       </div>
     </header>
-
+    <section class="topBar cartTopbar">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="topBarContent">
+              <h2>#Cart</h2>
+              <p>Add coupons & UP to 70% off!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col tableContainer">
+            <table>
+              <thead>
+                <tr>
+                  <td>Remove</td>
+                  <td>Image</td>
+                  <td>Product</td>
+                  <td>Price</td>
+                  <td>Quantity</td>
+                  <td>SubTotal</td>
+                </tr>
+              </thead>
+              <tbody id="cartBody">
+                <!-- <tr>
+                  <td>
+                    <i
+                      class="fa-solid fa-circle-xmark"
+                      onclick="removeRow()"
+                    ></i>
+                  </td>
+                  <td class="imageCart">
+                    <img src="images/blog/b1.jpg" alt="" />
+                  </td>
+                  <td>Product</td>
+                  <td>Price</td>
+                  <td><input type="number" min="1" value="" /></td>
+                  <td>SubTotal</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/cartScript.js"></script>
   </body>
 </html>

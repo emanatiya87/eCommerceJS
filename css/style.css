@@ -69,3 +69,14 @@ color: ;} */
   border-radius: 50%;
   background-color: var(--mainColor);
 }
+.topBar {
+  margin-top: 65px;
+  color: white;
+  padding: 40px 10px;
+}
+.topBarContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

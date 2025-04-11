@@ -1,8 +1,46 @@
 :root {
   --primary: red;
   --secondary: rgba(128, 128, 128, 0.5);
+  --secondryBackgroundColor: rgba(18, 32, 103, 0.862);
+  --mainColor: rgb(20, 149, 132);
+  --temporaryColor: rgb(83, 83, 83);
 }
-/* header */
-.homePage {
-  background-color: green;
+.cartTopbar {
+  background-color: var(--secondryBackgroundColor);
+}
+/* table */
+table {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+thead {
+  border-top: 1px solid var(--secondary);
+  border-bottom: 1px solid var(--secondary);
+  line-height: 35px;
+  font-weight: 700;
+}
+tbody {
+  padding: 10px 0;
+}
+.imageCart img {
+  width: 70%;
+  height: 50px;
+}
+tr i {
+  cursor: pointer;
+}
+tr input[type="number"] {
+  width: 40px;
+  text-align: center;
+  /* border: none; */
+}
+@media screen and (max-width: 700px) {
+  table {
+    /* overflow-x: scroll; */
+    width: 700px;
+  }
+  .tableContainer {
+    overflow-x: scroll;
+  }
 }
