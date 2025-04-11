@@ -82,6 +82,6 @@ applayCoupon.onclick = function () {
 };
 function updateTotalPrice() {
   Total.innerText =
-    Number(CartSubTotal.innerText) + Number(CouponsDiscount.innerText);
+    Number(CartSubTotal.innerText) - Number(CouponsDiscount.innerText);
 }
 updateTotalPrice();
