@@ -2,14 +2,14 @@
   --primary: red;
   --secondary: rgba(190, 190, 190, 0.5);
   --mainColor: rgb(20, 149, 132);
-  --temporaryColor: rgb(83, 83, 83);
+  --temporaryColor: rgb(66, 66, 66);
 }
 /* header */
 .homePage {
   background-color: var(--secondary);
 }
 html {
-  font-size: 20px;
+  font-size: 22px;
 }
 .homeContent {
   height: 100%;
@@ -34,7 +34,7 @@ html {
 }
 .homeTitleContent p {
   color: var(--temporaryColor);
-  font-weight: 400;
+  font-weight: bold;
 }
 .homeTitleContent a {
   color: var(--mainColor);
@@ -44,4 +44,18 @@ html {
   background: url(../images/button.png);
   background-size: contain;
   cursor: pointer;
+}
+@media screen and (max-width: 567px) {
+  .homeTitle {
+    background: url(../images/images.jpg);
+    background-size: cover;
+    background-position-x: center;
+  }
+  .homeTitleContent {
+    padding-top: 170px;
+    justify-content: flex-start;
+  }
+  html {
+    font-size: 18px;
+  }
 }
