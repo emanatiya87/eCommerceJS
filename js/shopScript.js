@@ -17,7 +17,7 @@ function displayProducts(data) {
   data.forEach((e) => {
     cartona += `
 
- <div class="col-md-4 ">
+ <div class="col-lg-3 col-md-4  col-6">
   <div class="productCard">
             <div class="productCardImg">
               <img src="${e[4]}" alt="product" />

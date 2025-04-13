@@ -70,7 +70,7 @@ function displayInCart() {
       couponAnimation.style.display = "flex";
       setTimeout(function () {
         couponAnimation.style.display = "none";
-      }, 2000);
+      }, 1400);
     } else {
       CouponsDiscount.value = 0;
       CouponsDiscount.innerText = 0;
@@ -85,6 +85,13 @@ function displayInCart() {
     );
   }
   updateTotalPrice();
+
+  let getCheck = document.getElementById("getCheck");
+  let check = document.getElementById("check");
+  getCheck.onclick = function displayCheck() {
+    check.innerText = Total.innerText;
+    document.getElementsByTagName("article")[0].style.display = "block";
+  };
 }
 displayInCart();
 function removeRow(index) {
@@ -96,3 +103,8 @@ function removeRow(index) {
     location.reload();
   }
 }
+
+let closeCheck = document.getElementById("closeCheck");
+closeCheck.onclick = function () {
+  document.getElementsByTagName("article")[0].style.display = "none";
+};

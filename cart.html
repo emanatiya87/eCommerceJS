@@ -165,7 +165,7 @@
           <div class="col-sm-6">
             <h2>Apply coupons</h2>
             <input type="text" id="enterCoupon" />
-            <button id="applayCoupon">Apply</button>
+            <button id="applayCoupon" class="cardsBTN">Apply</button>
             <p id="notValidCoupon">Not valid coupons</p>
           </div>
           <div class="col-sm-6">
@@ -189,12 +189,27 @@
                   <td id="Total">0</td>
                 </tr>
               </table>
-              <!-- <button>Get Reset</button> -->
+              <button class="cardsBTN" id="getCheck">Get check</button>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- check -->
+    <article id="articleCheck">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="overlay"></div>
+          <div class="check">
+            <h2>
+              Your Total Price is :
+              <span id="check"></span>$
+            </h2>
+            <button class="cardsBTN" id="closeCheck">close</button>
+          </div>
+        </div>
+      </div>
+    </article>
     <!-- animation coupon -->
     <div class="confetti" id="couponAnimation">
       <div class="confetti-piece"></div>
