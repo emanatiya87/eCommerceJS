@@ -1,5 +1,4 @@
 let cartBody = document.getElementById("cartBody");
-let addedToCart = JSON.parse(sessionStorage.getItem("cartProduct")); // parse string to array
 function displayInCart() {
   let addedToCart = JSON.parse(sessionStorage.getItem("cartProduct")); // parse string to array
   if (sessionStorage.getItem("cartProduct") && addedToCart.length != 0) {
@@ -25,8 +24,67 @@ function displayInCart() {
 
     cartBody.innerHTML = cartona;
   } else {
-    cartBody.innerHTML = "<tr><td colspan='6'>No items in cart</td></tr>";
+    cartBody.innerHTML =
+      "<tr><td colspan='6'><a href='shop.html' style='text-decoration:none'><span style='color:black' > No items in cart go to</span> Shoping Now !</a></td></tr>";
   }
+
+  let quantity = document.querySelectorAll(".quantity");
+  let totalPriceForItem = document.querySelectorAll(".totalPrice");
+  function updatePrice(quantity, index) {
+    let eachquantity = quantity.value;
+    let totalPriceValueForItem =
+      parseInt(eachquantity) * Number(addedToCart[index][0]);
+    totalPriceForItem[index].innerText = totalPriceValueForItem;
+    totalPriceForItem[index].value = totalPriceValueForItem;
+  }
+  quantity.forEach((quantity, index) => {
+    updatePrice(quantity, index);
+    quantity.onchange = () => {
+      updatePrice(quantity, index);
+      updateSubTotal();
+      updateTotalPrice();
+    };
+  });
+  let CartSubTotal = document.getElementById("CartSubTotal");
+  let CouponsDiscount = document.getElementById("CouponsDiscount");
+  let Total = document.getElementById("Total");
+
+  function updateSubTotal() {
+    let totalPrice = 0;
+    totalPriceForItem.forEach((price) => {
+      totalPrice += Number(price.value);
+      CartSubTotal.innerText = totalPrice;
+      CartSubTotal.value = totalPrice;
+    });
+  }
+  let notValidCoupon = document.getElementById("notValidCoupon");
+  updateSubTotal();
+  let enterCoupon = document.getElementById("enterCoupon");
+  let applayCoupon = document.getElementById("applayCoupon");
+  let couponAnimation = document.getElementById("couponAnimation");
+  applayCoupon.onclick = function () {
+    if (enterCoupon.value == "Eman") {
+      CouponsDiscount.value = 50;
+      CouponsDiscount.innerText = 50;
+      notValidCoupon.style.display = "none";
+      couponAnimation.style.display = "flex";
+      setTimeout(function () {
+        couponAnimation.style.display = "none";
+      }, 2000);
+    } else {
+      CouponsDiscount.value = 0;
+      CouponsDiscount.innerText = 0;
+      notValidCoupon.style.display = "block";
+    }
+    updateTotalPrice();
+  };
+  function updateTotalPrice() {
+    Total.innerText = Math.max(
+      Number(CartSubTotal.innerText) - Number(CouponsDiscount.innerText),
+      0
+    );
+  }
+  updateTotalPrice();
 }
 displayInCart();
 function removeRow(index) {
@@ -34,54 +92,7 @@ function removeRow(index) {
   cartProduct.splice(index, 1);
   sessionStorage.setItem("cartProduct", JSON.stringify(cartProduct));
   displayInCart();
-}
-let quantity = document.querySelectorAll(".quantity");
-let totalPriceForItem = document.querySelectorAll(".totalPrice");
-function updatePrice(quantity, index) {
-  let eachquantity = quantity.value;
-  let totalPriceValueForItem =
-    parseInt(eachquantity) * Number(addedToCart[index][0]);
-  totalPriceForItem[index].innerText = totalPriceValueForItem;
-  totalPriceForItem[index].value = totalPriceValueForItem;
-}
-quantity.forEach((quantity, index) => {
-  updatePrice(quantity, index);
-  quantity.onchange = () => {
-    updatePrice(quantity, index);
-    updateSubTotal();
-    updateTotalPrice();
-  };
-});
-let CartSubTotal = document.getElementById("CartSubTotal");
-let CouponsDiscount = document.getElementById("CouponsDiscount");
-let Total = document.getElementById("Total");
-
-function updateSubTotal() {
-  let totalPrice = 0;
-  totalPriceForItem.forEach((price) => {
-    totalPrice += Number(price.value);
-    CartSubTotal.innerText = totalPrice;
-    CartSubTotal.value = totalPrice;
-  });
-}
-let notValidCoupon = document.getElementById("notValidCoupon");
-updateSubTotal();
-let enterCoupon = document.getElementById("enterCoupon");
-let applayCoupon = document.getElementById("applayCoupon");
-applayCoupon.onclick = function () {
-  if (enterCoupon.value == "Eman") {
-    CouponsDiscount.value = 50;
-    CouponsDiscount.innerText = 50;
-    notValidCoupon.style.display = "none";
-  } else {
-    CouponsDiscount.value = 0;
-    CouponsDiscount.innerText = 0;
-    notValidCoupon.style.display = "block";
+  if (cartProduct.length == 0) {
+    location.reload();
   }
-  updateTotalPrice();
-};
-function updateTotalPrice() {
-  Total.innerText =
-    Number(CartSubTotal.innerText) - Number(CouponsDiscount.innerText);
 }
-updateTotalPrice();
