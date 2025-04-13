@@ -8,11 +8,14 @@
 .homePage {
   background-color: var(--secondary);
 }
+html {
+  font-size: 20px;
+}
 .homeContent {
   height: 100%;
 }
 .homeTitle {
-  background: url(../images/hero4.png);
+  background: url(../images/images.jpg);
   background-size: cover;
   height: 100%;
 }

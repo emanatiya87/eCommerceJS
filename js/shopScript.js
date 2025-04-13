@@ -39,6 +39,7 @@ function displayProducts(data) {
                   <p class="oldPrice">${e[1]}</p>
                   <p class="dash">|</p>
                   <p class="newPrice">${e[0]}</p>
+                  <p class="dash">$</p>
                 </div>
                 <div
                   class="productCardCart circle d-flex justify-content-center align-items-center"
