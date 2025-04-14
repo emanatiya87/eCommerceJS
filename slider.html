@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Splide Example</title>
+
+    <!-- Splide CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+
+    <style>
+      .splide__slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        font-size: 2rem;
+        background-color: #eee;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Splide Slider -->
+    <div class="splide" id="my-splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">Slide 1</li>
+          <li class="splide__slide">Slidejjjjj 2</li>
+          <li class="splide__slide">Slide 3</li>
+          <li class="splide__slide">Slide 4</li>
+          <li class="splide__slide">Slide 5</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Splide JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <!-- Initialize Splide -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#my-splide", {
+          type: "slide",
+          perPage: 3,
+          perMove: 1,
+          focus: "center",
+          pagination: false,
+          gap: "1rem",
+        }).mount();
+      });
+    </script>
+  </body>
+</html>

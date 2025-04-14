@@ -9,7 +9,7 @@
   --emptyStars: #e4e5e9;
 }
 .stayHome {
-  background-color: var(--secondryBackgroundColor);
+  background-color: var(--mainColor);
 }
 
 /* products */
@@ -34,7 +34,7 @@ main {
   border-radius: 15px;
 }
 .productCard p i {
-  color: var(--emptyStars);
+  color: var(--starsColor);
 }
 .productCard p i:hover {
   color: var(--starsHover);
@@ -46,6 +46,7 @@ main {
 }
 .productCardCart {
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .productCardCart i {
   color: white;

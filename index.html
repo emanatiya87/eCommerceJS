@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
   </head>
   <body>
     <header class="homePage">
@@ -122,7 +126,108 @@
         </div>
       </div>
     </header>
-
+    <br />
+    <!-- slider -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <h2 class="text-center">Our Features</h2>
+          <p class="line"></p>
+        </div>
+        <div class="row">
+          <div class="splide" id="my-splide">
+            <div class="splide__track">
+              <ul class="splide__list" id="sliderList">
+                <li class="splide__slide">
+                  <div class="productCard">
+                    <div class="productCardImg">
+                      <img src="images/products/n7.jpg" alt="product" />
+                    </div>
+                    <div class="productCardContent">
+                      <h6>Local Brand</h6>
+                      <h3>T-Shirt</h3>
+                      <p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="productCard">
+                    <div class="productCardImg">
+                      <img src="images/products/n1.jpg" alt="product" />
+                    </div>
+                    <div class="productCardContent">
+                      <h6>Local Brand</h6>
+                      <h3>Blouse</h3>
+                      <p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="productCard">
+                    <div class="productCardImg">
+                      <img src="images/products/f1.jpg" alt="product" />
+                    </div>
+                    <div class="productCardContent">
+                      <h6>Local Brand</h6>
+                      <h3>Shemeiz</h3>
+                      <p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="splide__slide">
+                  <div class="productCard">
+                    <div class="productCardImg">
+                      <img src="images/products/f3.jpg" alt="product" />
+                    </div>
+                    <div class="productCardContent">
+                      <h6>Local Brand</h6>
+                      <h3>T-Shirt</h3>
+                      <p>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="splide__slide shop-slide">
+                  <div class="goToShop">
+                    <a href="shop.html" target="_blank">
+                      <i class="fas fa-shopping-cart"></i> Go To Clothes Shop!
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="row">hh</div>
+      </div>
+    </section>
+    <!-- Splide JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
