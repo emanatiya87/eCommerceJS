@@ -139,10 +139,23 @@
   background-color: rgba(0, 0, 0, 0.4);
   transform: scale(1.05);
 }
+@media screen and (max-width: 567px) {
+  .productCard p i {
+    font-size: 0.5rem;
+  }
+}
 /* -------- */
 .line {
   width: 55px;
   height: 2px;
   background-color: var(--mainColor);
   margin: 10px auto;
+}
+.splide__slide {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.splide__slide.is-active {
+  opacity: 1;
 }
