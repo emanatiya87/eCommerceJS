@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-commerce</title>
+    <link rel="icon" href="images/logo.png" type="image/png" />
     <link rel="stylesheet" href="css/all.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -27,7 +28,7 @@
           </div>
           <div class="col-lg-6 p-3">
             <ul class="d-flex justify-content-end">
-              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html" class="activeNav">Home</a></li>
               <li><a href="shop.html">Shop</a></li>
               <li><a href="Blog.html">Blog</a></li>
               <li><a href="about.html">About</a></li>
@@ -365,14 +366,16 @@
       </div>
     </section>
     <!-- bar  -->
-    <section class="repairS topBar bg-">
+    <section class="repairS topBar">
       <div class="container-fluid">
         <div class="row">
           <div class="col">
             <div class="topBarContent">
               <p>Repair Service</p>
               <h2>Up to <span>70 % OFF</span>-All T-shirts &Shoses</h2>
-              <button class="btn btn-light">Expolre More!</button>
+              <a href="shop.html" target="_blank" class="btn btn-light"
+                >Expolre More!</a
+              >
             </div>
           </div>
         </div>
@@ -381,7 +384,7 @@
     <!-- banners -->
     <section>
       <div class="container">
-        <div class="row mt-4">
+        <div class="row mt-5">
           <div class="col-md-6">
             <div
               class="bannerCard text-light d-flex flex-column justify-content-center align-items-start position-relative border ps-3"
@@ -389,7 +392,9 @@
               <h6>CRAZY DEALS</h6>
               <h4>Buy 1 Get 1 Free!!</h4>
               <h5>The best classic dress is on sale</h5>
-              <button class="btn border text-light">Learn More</button>
+              <a class="btn border text-light" target="_blank" href="shop.html"
+                >Learn More</a
+              >
               <img
                 src="images/banner/b17.jpg"
                 alt=""
@@ -404,7 +409,9 @@
               <h6>Srpting/Summer</h6>
               <h4>upcomming seasons</h4>
               <h5>The best classic dress is on sale</h5>
-              <button class="btn border text-light">Learn More</button>
+              <a class="btn border text-light" href="Blog.html" target="_blank"
+                >Learn More</a
+              >
               <img
                 src="images/banner/b10.jpg"
                 alt=""
@@ -415,6 +422,114 @@
         </div>
       </div>
     </section>
+    <!-- bar  -->
+    <section class="topBar newsLetter bg-dark bg-gradient">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="topBarContent">
+              <h2>Sign Up for newsletters</h2>
+              <p class="text-light">
+                Get e-mail updates about our latest shop and
+                <span class="text-warning">special offers</span>
+              </p>
+            </div>
+          </div>
+          <div
+            class="d-flex justify-content-center align-items-center col-md-6"
+          >
+            <form
+              method="post "
+              class="bg-light rounded-3 overflow-hidden w-50 d-flex justify-content-between"
+            >
+              <input
+                type="email"
+                name=""
+                id=""
+                placeholder="Enter your email"
+                class="border-0 w-100"
+                required
+              />
+              <input type="submit" value="Sign UP" class="cardsBTN" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container mt-5 mb-2">
+        <div class="row mb-4">
+          <div class="col-md-4 text-dark fw-medium p-2">
+            <img src="images/logo.png" alt="logo" class="mb-3" />
+            <h5 class="p-2">Contacts</h5>
+            <p>Address: <span class="text-secondary">Cairo</span></p>
+            <p>Phone: <span class="text-secondary">01-113-364-852</span></p>
+            <h5 class="p-2">Follow US</h5>
+            <ul class="d-flex w-50 justify-content-evenly">
+              <li>
+                <a target="_blank" href="https://www.facebook.com/emanatia87"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://github.com/emanatiya87" target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/eman-atiya-6245b0294/"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/emanatia87/" target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h5>About</h5>
+            <ul>
+              <li><a href="about.html" target="_blank">About US</a></li>
+              <li><a href="#">Delivery information</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="contact.html">Contact US</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h5>My Account</h5>
+            <ul>
+              <li><a href="#">Sign in</a></li>
+              <li><a href="cart.html">View Cart</a></li>
+              <li><a href="#">My wishlist</a></li>
+              <li><a href="#">Track My Order</a></li>
+              <li><a href="contact.html">Help</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Install APP</h5>
+            <p class="text-secondary fw-medium">
+              From APP Store or Google Play
+            </p>
+            <div class="d-flex w-100 flex-wrap">
+              <img src="images/pay/app.jpg" alt="" class="border me-2" />
+              <img src="images/pay/play.jpg" alt="" class="border" />
+            </div>
+            <p class="text-secondary fw-medium">Security Payment Gateways</p>
+            <img src="images/pay/pay.png" alt="" />
+          </div>
+        </div>
+        <div class="row">
+          <p class="text-center text-secondary fw-medium">
+            &copy; 2025 Eman. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
     <!-- Splide JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

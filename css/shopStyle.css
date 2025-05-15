@@ -9,7 +9,16 @@
   --emptyStars: #e4e5e9;
 }
 .stayHome {
+  background: url(../images/banner/b11.png) no-repeat;
+  background-size: cover;
+  background-position: center;
   background-color: var(--mainColor);
+  height: 250px;
+}
+.stayHome .topBarContent {
+  align-items: flex-start;
+  height: 200px;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.466);
 }
 
 /* products */

@@ -32,6 +32,26 @@ nav ul li a {
   padding: 0 10px;
   cursor: pointer;
   color: black;
+  position: relative;
+  font-weight: 500;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 10px;
+  width: 0;
+  height: 2px;
+  background-color: var(--mainColor);
+  transition: 1s;
+}
+nav ul li a:hover::after,
+.activeNav::after {
+  width: 70%;
+}
+nav ul li a:hover,
+.activeNav {
+  color: var(--mainColor);
 }
 .navbar,
 .navLg {
@@ -124,4 +144,26 @@ color: ;} */
   100% {
     background-position: 0 50%, 50% 50%, 100% 50%;
   }
+}
+.cardsBTN {
+  background-color: var(--mainColor);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 5px 15px;
+  margin: 5px 10px;
+  font-size: 1.2rem;
+}
+/* footer */
+footer ul li a {
+  text-decoration: none;
+  color: rgb(66, 66, 66);
+  font-weight: 500;
+}
+footer ul li {
+  list-style-type: none;
+  padding-top: 4px;
+}
+footer ul {
+  padding: 0;
 }

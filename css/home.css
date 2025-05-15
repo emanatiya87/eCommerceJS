@@ -199,6 +199,9 @@
 .bannerCard {
   height: 330px;
 }
-.bannerCard:hover button {
-  background-color: rgb(2, 77, 2);
+.bannerCard:hover a {
+  background-color: var(--mainColor);
+}
+input:focus {
+  border: none;
 }

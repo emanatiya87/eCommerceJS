@@ -53,15 +53,7 @@ tr input[type="number"] {
   border-radius: 10px;
   padding: 5px;
 }
-.cardsBTN {
-  background-color: var(--mainColor);
-  border: none;
-  border-radius: 10px;
-  color: white;
-  padding: 5px 15px;
-  margin: 5px 10px;
-  font-size: 1.2rem;
-}
+
 .cartTotals {
   border: 1px solid var(--secondary);
   border-radius: 10px;
