@@ -46,7 +46,7 @@ nav ul li a {
   transition: 1s;
 }
 .navLg ul li a:hover::after,
-.activeNav::after {
+.navLg ul li a.activeNav::after {
   width: 70%;
 }
 .navLg ul li a:hover,
