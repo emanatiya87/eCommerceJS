@@ -35,7 +35,7 @@ nav ul li a {
   position: relative;
   font-weight: 500;
 }
-nav ul li a::after {
+.navLg ul li a::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -45,11 +45,11 @@ nav ul li a::after {
   background-color: var(--mainColor);
   transition: 1s;
 }
-nav ul li a:hover::after,
+.navLg ul li a:hover::after,
 .activeNav::after {
   width: 70%;
 }
-nav ul li a:hover,
+.navLg ul li a:hover,
 .activeNav {
   color: var(--mainColor);
 }
