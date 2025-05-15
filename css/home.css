@@ -159,3 +159,46 @@
 .splide__slide.is-active {
   opacity: 1;
 }
+.featureCard h6 {
+  background-color: #888;
+  padding: 5px;
+  border-radius: 7px;
+  font-size: 0.9rem;
+  color: white;
+  text-shadow: 0 0 25px rgba(0, 0, 0, 0.726);
+}
+.featureCard .blue {
+  background-color: #8adae3;
+}
+.featureCard .Pink {
+  background-color: #e189bc;
+}
+.featureCard .purple {
+  background-color: #a28fda;
+}
+.featureCard .green {
+  background-color: #b8dd7f;
+}
+.featureCard .babyBlue {
+  background-color: #89bfe1;
+}
+.featureCard .Orange {
+  background-color: #e5aa8b;
+}
+.featureCard img {
+  transition: transform 1.5s;
+}
+.featureCard:hover img {
+  transform: translateY(-10px);
+}
+/* bar repairS */
+.repairS {
+  background: url(../images/banner/b2.jpg) no-repeat;
+  background-size: cover;
+}
+.bannerCard {
+  height: 330px;
+}
+.bannerCard:hover button {
+  background-color: rgb(2, 77, 2);
+}

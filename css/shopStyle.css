@@ -25,6 +25,15 @@ main {
 .productCard:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+.productCard .productCardImg {
+  overflow: hidden;
+}
+.productCard img {
+  transition: transform 1s;
+}
+.productCard:hover img {
+  transform: scale(1.2);
+}
 .productCard h6 {
   color: var(--temporaryColor);
   padding-top: 10px 5px;
