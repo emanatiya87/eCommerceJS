@@ -193,27 +193,19 @@
                   <td id="Total">0</td>
                 </tr>
               </table>
-              <button class="cardsBTN" id="getCheck">Get check</button>
+              <button
+                type="button"
+                class="cardsBTN"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Get Check
+              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- check -->
-    <article id="articleCheck">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="overlay"></div>
-          <div class="check">
-            <h2>
-              Your Total Price is :
-              <span id="check"></span>$
-            </h2>
-            <button class="cardsBTN" id="closeCheck">close</button>
-          </div>
-        </div>
-      </div>
-    </article>
     <!-- animation coupon -->
     <div class="confetti" id="couponAnimation">
       <div class="confetti-piece"></div>
@@ -230,6 +222,125 @@
       <div class="confetti-piece"></div>
       <div class="confetti-piece"></div>
     </div>
+    <!-- Button to Open the Modal -->
+
+    <!-- The Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Happy deal!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Modal Body -->
+          <div class="modal-body">
+            Your Total Price is :
+            <span id="check"></span>$
+          </div>
+
+          <!-- Modal Footer -->
+          <form class="modal-footer" action="Blog.html">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <input type="submit" class="cardsBTN" id="saveChanges" value=" Save changes">
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+      <footer>
+      <div class="container mt-5 mb-2">
+        <div class="row mb-4">
+          <div class="col-md-4 col-6 text-dark fw-medium p-2">
+            <img src="images/logo.png" alt="logo" class="mb-3" />
+            <h5 class="p-2">Contacts</h5>
+            <p>Address: <span class="text-secondary">Cairo</span></p>
+            <p>Phone: <span class="text-secondary">01-113-364-852</span></p>
+            <h5 class="p-2">Follow US</h5>
+            <ul class="d-flex w-50 justify-content-evenly">
+              <li>
+                <a target="_blank" href="https://www.facebook.com/emanatia87"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://github.com/emanatiya87" target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/eman-atiya-6245b0294/"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/emanatia87/" target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-6">
+            <h5>About</h5>
+            <ul>
+              <li><a href="about.html" target="_blank">About US</a></li>
+              <li><a href="#">Delivery information</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="contact.html">Contact US</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2 col-6">
+            <h5>My Account</h5>
+            <ul>
+              <li><a href="#">Sign in</a></li>
+              <li><a href="cart.html">View Cart</a></li>
+              <li><a href="#">My wishlist</a></li>
+              <li><a href="#">Track My Order</a></li>
+              <li><a href="contact.html">Help</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-6">
+            <h5>Install APP</h5>
+            <p class="text-secondary fw-medium">
+              From APP Store or Google Play
+            </p>
+            <div class="d-flex w-100 flex-wrap">
+              <img src="images/pay/app.jpg" alt="" class="border me-2" />
+              <img src="images/pay/play.jpg" alt="" class="border" />
+            </div>
+            <p class="text-secondary fw-medium">Security Payment Gateways</p>
+            <img src="images/pay/pay.png" alt="" class="w-100" />
+          </div>
+        </div>
+        <div class="row">
+          <p class="text-center text-secondary fw-medium">
+            &copy; 2025 Eman. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/cartScript.js"></script>

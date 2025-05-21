@@ -85,12 +85,13 @@ function displayInCart() {
     );
   }
   updateTotalPrice();
-
-  let getCheck = document.getElementById("getCheck");
+  // check modal
   let check = document.getElementById("check");
-  getCheck.onclick = function displayCheck() {
-    check.innerText = Total.innerText;
-    document.getElementsByTagName("article")[0].style.display = "block";
+  check.innerText = Total.innerText;
+
+  let saveChanges = document.getElementById("saveChanges");
+  saveChanges.onclick = function () {
+    localStorage.setItem("ordered", JSON.stringify(addedToCart));
   };
 }
 displayInCart();
@@ -103,8 +104,3 @@ function removeRow(index) {
     location.reload();
   }
 }
-
-let closeCheck = document.getElementById("closeCheck");
-closeCheck.onclick = function () {
-  document.getElementsByTagName("article")[0].style.display = "none";
-};

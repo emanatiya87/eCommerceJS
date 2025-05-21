@@ -1,0 +1,20 @@
+main {
+  margin-top: 70px;
+}
+.letsTalk {
+  background: url(../images/about/banner.png) center;
+}
+
+.scrollingText p {
+  white-space: nowrap;
+  transform: translateX(100%);
+  animation: moving 10s linear infinite;
+}
+@keyframes moving {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -61,8 +61,6 @@ nav ul li a {
 .menue ul li {
   font-size: 1.5rem;
 }
-/* nav ul li a:hover {
-color: ;} */
 @media screen and (max-width: 1084px) {
   nav .col-lg-6 {
     display: none;
@@ -72,6 +70,9 @@ color: ;} */
   }
   .navLg {
     display: none;
+  }
+  .navbar {
+    padding-bottom: 0;
   }
 }
 @media screen and (min-width: 1084px) {
